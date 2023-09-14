@@ -1,4 +1,4 @@
-﻿namespace TokenBucketThrottlerTests.cs;
+﻿namespace TokenBucketThrottlerTests;
 
 using System.Threading;
 using TokenBucketThrottler;
@@ -8,6 +8,8 @@ public class AsyncGate
     readonly AsyncLock _lock = new();
     TaskCompletionSource _openCompletionSource = new();
     TaskCompletionSource _closeCompletionSource = new();
+
+    public bool IsOpen { get; private set; }
 
     /// <summary>
     /// Wait for the gate to be opened.
@@ -20,6 +22,11 @@ public class AsyncGate
             await _openCompletionSource.Task;
     }
 
+    /// <summary>
+    /// Wait for the gate to be closed.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     public async Task WaitForClose(CancellationToken cancellationToken = default)
     {
         using (cancellationToken.Register(_closeCompletionSource.SetCanceled))
@@ -48,20 +55,6 @@ public class AsyncGate
         IsOpen = true;
     }
 
-    public async Task OpenAndClose(CancellationToken cancellationToken = default)
-    {
-        using (await _lock.Lock(cancellationToken))
-        {
-            if (IsOpen)
-                throw new InvalidOperationException("AsyncGate already opened.");
-
-            UnlockedOpen();
-            UnlockedClose();
-        }
-    }
-
-    public bool IsOpen { get; private set; }
-
     /// <summary>
     /// Closes the AsyncGate. After closed, the gate is available to be reopened
     /// </summary>
@@ -82,6 +75,19 @@ public class AsyncGate
         IsOpen = false;
         _closeCompletionSource.SetResult();
         Reset();
+    }
+
+
+    public async Task OpenAndClose(CancellationToken cancellationToken = default)
+    {
+        using (await _lock.Lock(cancellationToken))
+        {
+            if (IsOpen)
+                throw new InvalidOperationException("AsyncGate already opened.");
+
+            UnlockedOpen();
+            UnlockedClose();
+        }
     }
 
     public void Reset()

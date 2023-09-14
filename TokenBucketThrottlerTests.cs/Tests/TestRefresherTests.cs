@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TokenBucketThrottlerTests.cs;
+namespace TokenBucketThrottlerTests;
 
 public class TestRefresherTests
 {

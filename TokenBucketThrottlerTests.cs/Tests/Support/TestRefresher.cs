@@ -1,6 +1,5 @@
-﻿namespace TokenBucketThrottlerTests.cs;
+﻿namespace TokenBucketThrottlerTests;
 
-using System;
 using System.Threading;
 using TokenBucketThrottler;
 

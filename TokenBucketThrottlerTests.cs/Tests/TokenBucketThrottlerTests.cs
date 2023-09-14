@@ -1,4 +1,4 @@
-﻿namespace TokenBucketThrottlerTests.cs;
+﻿namespace TokenBucketThrottlerTests;
 using TokenBucketThrottler;
 
 public class TokenBucketThrottlerTests

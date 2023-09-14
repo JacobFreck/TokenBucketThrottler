@@ -1,7 +1,7 @@
 ﻿using System;
 using TokenBucketThrottler;
 
-namespace TokenBucketThrottlerTests.cs;
+namespace TokenBucketThrottlerTests;
 
 public class ObservableTokenBucket : ITokenBucket
 {

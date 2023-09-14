@@ -5,7 +5,7 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenBucketThrottler", "TokenBucketThrottler\TokenBucketThrottler.csproj", "{D49E953E-11E9-4D2A-9203-C91D2B5D60CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenBucketThrottlerTests.cs", "TokenBucketThrottlerTests.cs\TokenBucketThrottlerTests.cs.csproj", "{F4310C44-3E30-4BB3-AE07-5E50678EFA32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenBucketThrottlerTests", "TokenBucketThrottlerTests.cs\TokenBucketThrottlerTests.csproj", "{F4310C44-3E30-4BB3-AE07-5E50678EFA32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

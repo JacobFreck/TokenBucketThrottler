@@ -27,10 +27,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Benchmarks\" />
-    <None Remove="Support\" />
+    <None Remove="Tests\" />
+    <None Remove="Tests\Support\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Benchmarks\" />
-    <Folder Include="Support\" />
+    <Folder Include="Tests\" />
+    <Folder Include="Tests\Support\" />
   </ItemGroup>
 </Project>

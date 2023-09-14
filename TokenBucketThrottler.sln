@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenBucketThrottler", "TokenBucketThrottler\TokenBucketThrottler.csproj", "{D49E953E-11E9-4D2A-9203-C91D2B5D60CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenBucketThrottlerTests.cs", "TokenBucketThrottlerTests.cs\TokenBucketThrottlerTests.cs.csproj", "{F4310C44-3E30-4BB3-AE07-5E50678EFA32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D49E953E-11E9-4D2A-9203-C91D2B5D60CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49E953E-11E9-4D2A-9203-C91D2B5D60CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49E953E-11E9-4D2A-9203-C91D2B5D60CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49E953E-11E9-4D2A-9203-C91D2B5D60CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4310C44-3E30-4BB3-AE07-5E50678EFA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4310C44-3E30-4BB3-AE07-5E50678EFA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4310C44-3E30-4BB3-AE07-5E50678EFA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4310C44-3E30-4BB3-AE07-5E50678EFA32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F61F7EBC-CD20-448E-AB26-335B2426D31B}
+	EndGlobalSection
+EndGlobal
